@@ -91,7 +91,7 @@ $result = $conn->query($sql);
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill" style="background-image:url('http://f.ptcdn.info/784/037/000/nyglw3js679wdUPh5HV-o.jpg');"></div>
+                <div class="fill" src="whanwhan/img/naladkrabang/nalad1.jpg"></div>
                 <div class="carousel-caption">
                     <h2>Timber Cafe</h2>
                 </div>
@@ -125,8 +125,7 @@ $result = $conn->query($sql);
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Timber Cafe
-                    <small>Thailand</small>
+                <h1 class="page-header">ณ ลาดกระบัง
                 </h1>
             </div>
         </div>
@@ -137,7 +136,11 @@ $result = $conn->query($sql);
             <!-- Map Column -->
             <div class="col-md-8">
             <!-- content -->
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วันนี้หวานหวานจะมาแนะนำร้านคาเฟ่ชิคๆชิลๆน่านั่ง แถวลาดกระบังให้กับทุกคนกันค่ะ นั่นก็คือ คื้ออ คื๊ออออออ ร้านTimber Cafe ร้านที่เด็กลาดกระบังต้องรู้จักกันแน่นอน(ถึงร้านจะอยู่ลึกไปหน่อยก็ตาม) ซึ่งร้านนี้เป็นคาเฟ่ที่มีทั้งอาหารจานหลักและของหวาน นอกจากนี้ยังมีของเล่นให้เล่นระหว่างรออาหารด้วย โดยการสั่งอาหารของที่นี่นั้นเมื่อสั่งเสร็จ พนักงานจะให้เครื่องกลมๆสีดำ ขนาดเท่าฝ่ามือมาให้ เมื่ออาหารพร้อมเสิร์ฟ เครื่องจะสั่นให้ไปรับอาหารที่เคาท์เตอร์   </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;วันนี้หมูพริ้วจะพาทุกคนไปนั่งชิคค์ๆชิลล์ๆที่คาเฟ่ต์ฮิปๆย่านลาดกระบังด้วยกันนะฮะ
+ร้านนี้มีพิกัดอยู่ในซอยฉลองกรุง1 ตรงเข้าไปข้ามสะพานตรงไปอีกอยู่ซ้ายมืออยู่ตรง"ตลาดนัดเทคโน"ด้านในสุด (พิกัดเอามาจากเพจร้านนะฮะ พิกัดเดิมผมเข้าใจผิดเดี๋ยวจะหลงกันฮะ ขอโทษด้วยนะฮะ) 
+ซึ่งอยู่ใกล้ๆทางรถไฟสถานีเจ้าคุณทหารนั่นเองจ้า ถ้าไปไม่ถูกลองแวะถามคนแถวนั้นได้ 
+เด็กลาดกระบังน่าจะรู้จักซอยนี้กันดี เพราะของกินอร่อยๆเยอะมากกกกกกกกก
+โดยคาเฟ่ต์นี้จะมีขายทั้งอาหารจานเดียว เครื่องดื่ม ของทานเล่น และขนมหวานมากมายหลายชนิดเลยด้วย เริ่ดมากเลยอ่ะแก</p>
             <!-- picture row1 -->
             <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg" height="30%" width="30%"></a>
             &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg" height="30%" width="30%"></a>
@@ -173,21 +176,21 @@ $result = $conn->query($sql);
             id="rating-input-1-1" name="rating-input-1">
         <label for="rating-input-1-1" class="rating-star"></label>
     </span><br>
-                    Timber Cafe Thailand<br>
+                    ณ ลาดกระบัง<br>
                 </p>
                 <p><i class="fa fa-phone"></i> 
-                    <abbr title="Phone">P</abbr>: 089-2027882</p>
-                <p><i class="fa fa-envelope-o"></i>
-                    <abbr title="Email">M</abbr>: timbercafe@hotmail.com</p>
+                    <abbr title="Phone">P</abbr>: 086-0658422</p>
                 <p><i class="fa fa-clock-o"></i> 
-                    <abbr title="Hours">H</abbr>: Monday - Saturday: 11.00A.M - 11.00P.M</p>
+                    <abbr title="Hours">H</abbr>: Tuesday: 7.00A.M - 7.00P.M <br>
+                            Wednesday - Sunday: 10.00A.M - 7.00P.M
+</p>
                 <ul class="list-unstyled list-inline list-social-icons">
                     <li>
-                        <a href="https://www.facebook.com/timbercafethailand"><i class="fa fa-facebook-square fa-2x"></i></a>
+                        <a href="https://www.facebook.com/nalatkrabang/"><i class="fa fa-facebook-square fa-2x"></i></a>
                     </li>
                 </ul>
                 <!-- Embedded Google Map -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.8584043213637!2d100.76397161492731!3d13.727021201565414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d665281e02d7d%3A0x77567d8428d890ef!2sTimber+cafe+thailand!5e0!3m2!1sth!2sth!4v1477997840172" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.902623913583!2d100.7875013149273!3d13.724344901626528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d662d44481a89%3A0x81e7851b0c18ce51!2z4LiTIOC4peC4suC4lOC4geC4o-C4sOC4muC4seC4hw!5e0!3m2!1sen!2sth!4v1478587726234" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
         <!-- /.row -->
