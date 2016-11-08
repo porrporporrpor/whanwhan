@@ -55,6 +55,24 @@ $result = $conn->query($sql);
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+<!-- for count like -->
+    <script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+            // clear click count
+            // localStorage.clear();
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = ""+ localStorage.clickcount;
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+
 </head>
 
 <body>
@@ -160,7 +178,7 @@ $result = $conn->query($sql);
                 <h3>Contact Details</h3>
                 <p>
                 <!-- rating star -->
-                <span class="rating">
+                <!-- <span class="rating">
                     <input type="radio" class="rating-input"
                         id="rating-input-1-5" name="rating-input-1">
                     <label for="rating-input-1-5" class="rating-star"></label>
@@ -177,7 +195,12 @@ $result = $conn->query($sql);
                         id="rating-input-1-1" name="rating-input-1">
                     <label for="rating-input-1-1" class="rating-star"></label>
                 </span>
-                <button type="submit" class="btn btn-info btn-xs" style="margin-top: -15px;">rate</button><br>
+                <button type="submit" class="btn btn-info btn-xs" style="margin-top: -15px;">rate</button> -->
+
+                <!-- click like -->
+                <p><button type="submit" class="btn btn-danger btn-xs" onclick="clickCounter()">
+                <span class="glyphicon glyphicon-heart">LIKE</span></button>
+                <span id="result"></span></p>
                     Timber Cafe Thailand<br>
                 </p>
                 <p><i class="fa fa-phone"></i> 
@@ -202,7 +225,7 @@ $result = $conn->query($sql);
         <div class="row">
             <div class="col-md-8">
                 <h3>-Comment-</h3>
-                <form role="form" action = "comment.php" method="post">
+                <form role="form" action = "comment_timber.php" method="post">
 
                     <div class="form-group">
                       <label for="NameForm">
@@ -221,25 +244,6 @@ $result = $conn->query($sql);
 
                     <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
                 </form>
-                    <!-- <form role="form" action="comment.php" method="post">
-                        <div class="form-group">
-                            <label for="NameForm">
-                                Name :
-                            </label>
-                            <input name="name" type="text" class="form-control" id="NameForm">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="ContentForm">
-                                Message :
-                            </label>
-                            <textarea rows="10" cols="100" class="form-control" id="comment" style="resize:none"></textarea>
-                        </div>
-
-                    <button type="submit" class="btn btn-info">
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                    </button>
-                </form> -->
                 <br>
                 <!-- update comment from datqbase -->
                 <?php
@@ -260,31 +264,6 @@ $result = $conn->query($sql);
                     }
                         $conn->close(); 
                 ?>
-            </div>
-        </div>
-                 <!--    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Name:</label>
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-                            <p class="help-block"></p>
-                        </div>
-                    </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Message:</label>
-                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
-                        </div>
-                    </div>
-                    <div id="success"></div> -->
-                    <!-- For success/fail messages -->
-                    <!-- <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button> 
-                </form>-->
-            </div>
-
-        </div>
-        <!-- /.row -->
-
-        <hr>
 
         <!-- Footer -->
         <footer>

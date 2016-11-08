@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM timber order by datetime DESC";
+$sql = "SELECT * FROM atladkrabang order by datetime DESC";
 $result = $conn->query($sql);
 
 ?>
@@ -54,6 +54,24 @@ $result = $conn->query($sql);
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+<!-- for count like -->
+<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+            // clear click count
+            // localStorage.clear();
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result3").innerHTML = ""+ localStorage.clickcount;
+    } else {
+        document.getElementById("result3").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
 
 </head>
 
@@ -162,7 +180,7 @@ $result = $conn->query($sql);
                 <h3>Contact Details</h3>
                 <p>
                 <!-- rating star -->
-                <span class="rating">
+                <!-- <span class="rating">
                     <input type="radio" class="rating-input"
                         id="rating-input-1-5" name="rating-input-1">
                     <label for="rating-input-1-5" class="rating-star"></label>
@@ -179,7 +197,12 @@ $result = $conn->query($sql);
                         id="rating-input-1-1" name="rating-input-1">
                     <label for="rating-input-1-1" class="rating-star"></label>
                 </span>
-                <button type="submit" class="btn btn-info btn-xs" style="margin-top: -15px;">rate</button><br>
+                <button type="submit" class="btn btn-info btn-xs" style="margin-top: -15px;">rate</button> -->
+
+                <!-- click like -->
+                <p><button type="submit" class="btn btn-danger btn-xs" onclick="clickCounter()">
+                <span class="glyphicon glyphicon-heart">LIKE</span></button>
+                <span id="result3"></span></p>
                     ณ ลาดกระบัง<br>
                 </p>
                 <p><i class="fa fa-phone"></i> 
@@ -204,7 +227,7 @@ $result = $conn->query($sql);
         <div class="row">
             <div class="col-md-8">
                 <h3>-Comment-</h3>
-                <form role="form" action = "comment.php" method="post">
+                <form role="form" action = "comment_atladkrabang.php" method="post">
 
                     <div class="form-group">
                       <label for="NameForm">

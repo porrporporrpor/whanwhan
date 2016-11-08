@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>kanomwanwan</title>
+    <title>whanwhan</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +26,21 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = ""+ localStorage.clickcount;
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
 
 </head>
 
@@ -169,6 +184,25 @@
             <div class="col-md-4">
                 <h3>Contact Details</h3>
                 <p>
+                <span class="rating">
+        <input type="radio" class="rating-input"
+            id="rating-input-1-5" name="rating-input-1">
+        <label for="rating-input-1-5" class="rating-star"></label>
+        <input type="radio" class="rating-input"
+            id="rating-input-1-4" name="rating-input-1">
+        <label for="rating-input-1-4" class="rating-star"></label>
+        <input type="radio" class="rating-input"
+            id="rating-input-1-3" name="rating-input-1">
+        <label for="rating-input-1-3" class="rating-star"></label>
+        <input type="radio" class="rating-input"
+            id="rating-input-1-2" name="rating-input-1">
+        <label for="rating-input-1-2" class="rating-star"></label>
+        <input type="radio" class="rating-input"
+            id="rating-input-1-1" name="rating-input-1">
+        <label for="rating-input-1-1" class="rating-star"></label>
+    </span>
+    <p><button type="submit" class="btn btn-danger btn-xs" onclick="clickCounter()"><span class="glyphicon glyphicon-heart">LIKE</span></button>
+<span id="result"></span></p>
                     <i class="fa fa-star"></i>
                     Timber Cafe Thailand<br>
                 </p>
@@ -210,7 +244,7 @@
                     </div>
                     <div id="success"></div>
                     <!-- For success/fail messages -->
-                    <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+                    <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
                 </form>
             </div>
 
@@ -237,10 +271,6 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Contact Form JavaScript -->
-    <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
 
 </body>
 
