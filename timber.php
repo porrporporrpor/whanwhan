@@ -1,3 +1,21 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "whanwhan";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM timber order by datetime DESC";
+$result = $conn->query($sql);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,7 +100,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">KANOMWANWAN</a>
+                <a class="navbar-brand" href="index.html"><b>WH</b> WhanWhan</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -210,8 +228,45 @@
         <div class="row">
             <div class="col-md-8">
                 <h3>-Comment-</h3>
-                <form name="sentMessage" id="contactForm" novalidate>
-                    <div class="control-group form-group">
+                    <form role="form" action="comment.php" method="post">
+                        <div class="form-group">
+                            <label for="NameForm">
+                                Name :
+                            </label>
+                            <input name="name" type="text" class="form-control" id="NameForm">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ContentForm">
+                                Message :
+                            </label>
+                            <textarea rows="10" cols="100" class="form-control" id="message" style="resize:none"></textarea>
+                        </div>
+
+                    <button type="submit" class="btn btn-info">
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </button>
+                </form>
+                <br>
+                <!-- update comment from database -->
+                <?php
+                    if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            echo '<div class="jumbotron">';
+                            echo '<h2>';
+                            echo $row["name"];
+                            echo '</h2>'.$row["datetime"];
+                            echo '<p>';
+                            echo $row["comment"];
+                            echo '</p>';
+                            echo '</div>';
+                        }
+                    }
+                        $conn->close(); 
+                ?>
+            </div>
+        </div>
+                 <!--    <div class="control-group form-group">
                         <div class="controls">
                             <label>Name:</label>
                             <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
@@ -224,10 +279,10 @@
                             <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
                         </div>
                     </div>
-                    <div id="success"></div>
+                    <div id="success"></div> -->
                     <!-- For success/fail messages -->
-                    <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
-                </form>
+                    <!-- <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button> 
+                </form>-->
             </div>
 
         </div>
