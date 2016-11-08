@@ -31,6 +31,9 @@ $result = $conn->query($sql);
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
     <!-- Custom CSS -->
     <link href="css/modern-business.css" rel="stylesheet">
 
@@ -91,19 +94,19 @@ $result = $conn->query($sql);
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill" style="background-image:url('http://f.ptcdn.info/784/037/000/nyglw3js679wdUPh5HV-o.jpg');"></div>
+                <div class="fill" style="background-image:url('http://www.mx7.com/i/d88/aJMtkm.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Timber Cafe</h2>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg');"></div>
+                <div class="fill" style="background-image:url('http://www.mx7.com/i/1e1/H6d4ew.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Timber Cafe</h2>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('http://f.ptcdn.info/785/037/000/nygmcrn80kiz521XL09-o.jpg');"></div>
+                <div class="fill" style="background-image:url('http://www.mx7.com/i/c16/6KiLfP.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Timber Cafe</h2>
                 </div>
@@ -156,23 +159,25 @@ $result = $conn->query($sql);
             <div class="col-md-4">
                 <h3>Contact Details</h3>
                 <p>
-                    <span class="rating">
-        <input type="radio" class="rating-input"
-            id="rating-input-1-5" name="rating-input-1">
-        <label for="rating-input-1-5" class="rating-star"></label>
-        <input type="radio" class="rating-input"
-            id="rating-input-1-4" name="rating-input-1">
-        <label for="rating-input-1-4" class="rating-star"></label>
-        <input type="radio" class="rating-input"
-            id="rating-input-1-3" name="rating-input-1">
-        <label for="rating-input-1-3" class="rating-star"></label>
-        <input type="radio" class="rating-input"
-            id="rating-input-1-2" name="rating-input-1">
-        <label for="rating-input-1-2" class="rating-star"></label>
-        <input type="radio" class="rating-input"
-            id="rating-input-1-1" name="rating-input-1">
-        <label for="rating-input-1-1" class="rating-star"></label>
-    </span><br>
+                <!-- rating star -->
+                <span class="rating">
+                    <input type="radio" class="rating-input"
+                        id="rating-input-1-5" name="rating-input-1">
+                    <label for="rating-input-1-5" class="rating-star"></label>
+                    <input type="radio" class="rating-input"
+                        id="rating-input-1-4" name="rating-input-1">
+                    <label for="rating-input-1-4" class="rating-star"></label>
+                    <input type="radio" class="rating-input"
+                        id="rating-input-1-3" name="rating-input-1">
+                    <label for="rating-input-1-3" class="rating-star"></label>
+                    <input type="radio" class="rating-input"
+                        id="rating-input-1-2" name="rating-input-1">
+                    <label for="rating-input-1-2" class="rating-star"></label>
+                    <input type="radio" class="rating-input"
+                        id="rating-input-1-1" name="rating-input-1">
+                    <label for="rating-input-1-1" class="rating-star"></label>
+                </span>
+                <button type="submit" class="btn btn-info btn-xs" style="margin-top: -15px;">rate</button><br>
                     Timber Cafe Thailand<br>
                 </p>
                 <p><i class="fa fa-phone"></i> 

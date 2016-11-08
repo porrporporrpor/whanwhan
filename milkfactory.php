@@ -31,6 +31,9 @@ $result = $conn->query($sql);
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
     <!-- Custom CSS -->
     <link href="css/modern-business.css" rel="stylesheet">
 
@@ -91,21 +94,21 @@ $result = $conn->query($sql);
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill" style="background-image:url('http://f.ptcdn.info/784/037/000/nyglw3js679wdUPh5HV-o.jpg');"></div>
+                <div class="fill" style="background-image:url('http://www.mx7.com/i/9b7/Mh1Y6x.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Timber Cafe</h2>
+                    <h2>Milk Factory</h2>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg');"></div>
+                <div class="fill" style="background-image:url('http://www.mx7.com/i/b2a/m3ry31.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Timber Cafe</h2>
+                    <h2>Milk Factory</h2>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('http://f.ptcdn.info/785/037/000/nygmcrn80kiz521XL09-o.jpg');"></div>
+                <div class="fill" style="background-image:url('http://www.mx7.com/i/ba6/ZrLqY0.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Timber Cafe</h2>
+                    <h2>Milk Factory</h2>
                 </div>
             </div>
         </div>
@@ -126,6 +129,7 @@ $result = $conn->query($sql);
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Milk Factory
+                    <small>Dessert&Restaurant</small>
                 </h1>
             </div>
         </div>
@@ -159,23 +163,26 @@ $result = $conn->query($sql);
             <div class="col-md-4">
                 <h3>Contact Details</h3>
                 <p>
-                    <span class="rating">
-        <input type="radio" class="rating-input"
-            id="rating-input-1-5" name="rating-input-1">
-        <label for="rating-input-1-5" class="rating-star"></label>
-        <input type="radio" class="rating-input"
-            id="rating-input-1-4" name="rating-input-1">
-        <label for="rating-input-1-4" class="rating-star"></label>
-        <input type="radio" class="rating-input"
-            id="rating-input-1-3" name="rating-input-1">
-        <label for="rating-input-1-3" class="rating-star"></label>
-        <input type="radio" class="rating-input"
-            id="rating-input-1-2" name="rating-input-1">
-        <label for="rating-input-1-2" class="rating-star"></label>
-        <input type="radio" class="rating-input"
-            id="rating-input-1-1" name="rating-input-1">
-        <label for="rating-input-1-1" class="rating-star"></label>
-    </span><br>
+            <!-- rating star -->
+            
+                <span class="rating">
+                    <input type="radio" class="rating-input"
+                        id="rating-input-1-5" name="rating-input-1">
+                    <label for="rating-input-1-5" class="rating-star"></label>
+                    <input type="radio" class="rating-input"
+                        id="rating-input-1-4" name="rating-input-1">
+                    <label for="rating-input-1-4" class="rating-star"></label>
+                    <input type="radio" class="rating-input"
+                        id="rating-input-1-3" name="rating-input-1">
+                    <label for="rating-input-1-3" class="rating-star"></label>
+                    <input type="radio" class="rating-input"
+                        id="rating-input-1-2" name="rating-input-1">
+                    <label for="rating-input-1-2" class="rating-star"></label>
+                    <input type="radio" class="rating-input"
+                        id="rating-input-1-1" name="rating-input-1">
+                    <label for="rating-input-1-1" class="rating-star"></label>
+                </span>
+                <button type="submit" class="btn btn-info btn-xs" style="margin-top: -15px;">rate</button><br>
                     Milk Factory<br>
                 </p>
                 <p><i class="fa fa-phone"></i> 
