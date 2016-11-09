@@ -26,7 +26,7 @@ $result = $conn->query($sql);
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>WhanWhan</title>
+    <title>Whan Whan</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -56,47 +56,78 @@ $result = $conn->query($sql);
     <![endif]-->
 
 <!-- for count like -->
-    <script>
+<!-- <script>
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.clickcount) {
             localStorage.clickcount = Number(localStorage.clickcount)+1;
-            // clear click count
-            // localStorage.clear();
         } else {
             localStorage.clickcount = 1;
         }
-        document.getElementById("result").innerHTML = ""+ localStorage.clickcount;
+        document.getElementById("result_timber").innerHTML = "" + localStorage.clickcount;
     } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        document.getElementById("result_timber").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
-</script>
+</script> -->
+
+<style>
+      body {
+      font-family: 'Kanit', sans-serif;
+      color: black;
+    }
+    h1, h3 {
+      font-family: 'Kanit', sans-serif;
+      color: black;
+    }
+    a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+    }
+    }
+    a:hover {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+    }
+    a:active {
+    color: gray;
+    background-color: transparent;
+    text-decoration: underline;
+    }
+</style>
 
 </head>
 
 <body>
 
-    <!-- Navbar (sit on top) -->
+<!-- Navbar -->
 <div class="w3-top">
-  <ul class="w3-navbar w3-black w3-wide w3-padding-8">
-    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-      <a class="w3-dropdown-click w3-hover-white w3-small w3-white" href="javascript:void(0);" onclick="myFunction()" title="Menu">
-      <i class="fa fa-bars"></i></a>
-    </li>
-
-    <li>
-      <a href="index.html" class="w3-margin-left"><b>WH</b> WhanWhan</a>
-    </li>
-    <!-- Float links to the right. Hide them on small screens -->
-    <li class="w3-right w3-small">
-      <a href="milkfactory.php" class="w3-left">milk factory</a>
-      <a href="timber.php" class="w3-left">timber</a>
-      <a href="atladkrabang.php" class="w3-left">ณ ลาดกระบัง</a>
-      <a href="lamun.php" class="w3-left">ละมุน</a>
-      <a href="bancha.php" class="w3-left w3-margin-right">สถานีบ้านชา</a>
-    </li>
-      </ul>
+ <ul class="w3-navbar w3-left-align w3-large w3-black">
+    <a href="javascript:void(0);" onclick="openNav()">
+        <i class="w3-hide-medium w3-hide-large w3-hover-black fa fa-bars w3-black w3-display-right w3-margin-right"></i>
+    </a>
+ <li>
+    <a href="index.html" class="w3-large w3-margin-left w3-medium w3-left w3-hover-white w3-text-white w3-padding-12"><b>WH</b> WhanWhan</a>
+  </li>
+   <li class="w3-right w3-small">
+      <a href="milkfactory.php" class="w3-left" style="margin-top: 7px">milk factory</a>
+      <a href="timber.php" class="w3-left" style="margin-top: 7px">timber</a>
+      <a href="atladkrabang.php" class="w3-left" style="margin-top: 7px">ณ ลาดกระบัง</a>
+      <a href="lamun.php" class="w3-left" style="margin-top: 7px">ละมุน</a>
+      <a href="bancha.php" class="w3-left" style="margin-top: 7px">สถานีบ้านชา</a>
+                        <!-- search box -->
+                        <form class="navbar-form navbar-form-sm navbar-right w3-left w3-margin-right w3-hide-medium" method=GET action="http://www.google.co.th/search">
+                            <div class="form-group form-group-sm">
+                              <input type="text" name=q class="form-control" placeholder="Search" value="">
+                            </div>
+                            <button type="submit" class="btn btn-default btn-sm">
+                                <span class="fa fa-search" aria-hidden="true"></span>
+                            </button>
+                        </form>
+                    </li>
+ </ul>
 </div>
 
 
@@ -158,49 +189,37 @@ function clickCounter() {
             <!-- Map Column -->
             <div class="col-md-8">
             <!-- content -->
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วันนี้หวานหวานจะมาแนะนำร้านคาเฟ่ชิคๆชิลๆน่านั่ง แถวลาดกระบังให้กับทุกคนกันค่ะ นั่นก็คือ คื้ออ คื๊ออออออ ร้านTimber Cafe ร้านที่เด็กลาดกระบังต้องรู้จักกันแน่นอน(ถึงร้านจะอยู่ลึกไปหน่อยก็ตาม) ซึ่งร้านนี้เป็นคาเฟ่ที่มีทั้งอาหารจานหลักและของหวาน นอกจากนี้ยังมีของเล่นให้เล่นระหว่างรออาหารด้วย โดยการสั่งอาหารของที่นี่นั้นเมื่อสั่งเสร็จ พนักงานจะให้เครื่องกลมๆสีดำ ขนาดเท่าฝ่ามือมาให้ เมื่ออาหารพร้อมเสิร์ฟ เครื่องจะสั่นให้ไปรับอาหารที่เคาท์เตอร์   </p>
-            <!-- picture row1 -->
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg" height="30%" width="30%"></a></p>
-            <!-- picture row2 -->
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg" height="30%" width="30%"></a></p>
-            <!-- picture row3 -->
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg" height="30%" width="30%"></a></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วันนี้หวานหวานจะมาแนะนำร้านคาเฟ่ชิคๆชิลๆน่านั่ง แถวลาดกระบังให้กับทุกคนกันค่ะ นั่นก็คือออออออออ ร้านTimber Cafe ร้านที่เด็กลาดกระบังต้องรู้จักกันแน่นอน(ถึงร้านจะอยู่ลึกไปหน่อยก็ตาม) ซึ่งร้านนี้เป็นคาเฟ่ที่มีทั้งอาหารจานหลักและของหวาน นอกจากนี้ยังมีของเล่นให้เล่นระหว่างรออาหารด้วย โดยการสั่งอาหารของที่นี่นั้นเมื่อสั่งเสร็จ พนักงานจะให้เครื่องกลมๆสีดำ ขนาดเท่าฝ่ามือมาให้ เมื่ออาหารพร้อมเสิร์ฟ เครื่องจะสั่นให้ไปรับอาหารที่เคาท์เตอร์  ซึ่งราคาอาหารนั้นก็จัดอยู่ในระดับกลางๆ ส่วนรสชาติก็ต้องบอกให้ทุกคนมาลองดูเองนะคะ แต่สำหรับหวานหวานแล้ว อร่อยถูกปากมากๆค่า</p>
+            <!-- picture 1 -->
+            <br>
+            <p align="center"><a href="http://www.mx7.com/i/983/dXJ5dK.jpg"><img src="http://www.mx7.com/i/983/dXJ5dK.jpg" height="90%" width="90%"></a>
+            <!-- picture 2 -->
+            <p align="center"><a href="http://www.mx7.com/i/ce7/fJaUup.jpg"><img src="http://www.mx7.com/i/ce7/fJaUup.jpg" height="90%" width="90%"></a>
+            <!-- picture 3 -->
+            <p align="center"><a href="http://www.mx7.com/i/bff/ph10SE.jpg"><img src="http://www.mx7.com/i/bff/ph10SE.jpg" height="90%" width="90%"></a>
+            <!-- picture 4 -->
+            <p align="center"><a href="http://www.mx7.com/i/182/9xmZ5c.jpg"><img src="http://www.mx7.com/i/182/9xmZ5c.jpg" height="90%" width="90%"></a>
+            <!-- picture 5 -->
+            <p align="center"><a href="http://www.mx7.com/i/d5d/gTcBVE.jpg"><img src="http://www.mx7.com/i/d5d/gTcBVE.jpg" height="90%" width="90%"></a>
+            <!-- picture 6 -->
+            <p align="center"><a href="http://www.mx7.com/i/9ed/0IsXg0.jpg"><img src="http://www.mx7.com/i/9ed/0IsXg0.jpg" height="90%" width="90%"></a>
+            <!-- picture 7 -->
+            <p align="center"><a href="http://www.mx7.com/i/d48/RUEA4B.jpg"><img src="http://www.mx7.com/i/d48/RUEA4B.jpg" height="90%" width="90%"></a>
+            <!-- picture 8 -->
+            <p align="center"><a href="http://www.mx7.com/i/192/UgUxbj.jpg"><img src="http://www.mx7.com/i/192/UgUxbj.jpg" height="90%" width="90%"></a>
+            <!-- picture 9 -->
+            <p align="center"><a href="http://www.mx7.com/i/cff/Sr8oKv.jpg"><img src="http://www.mx7.com/i/cff/Sr8oKv.jpg" height="90%" width="90%"></a>
 
             </div>
             <!-- Contact Details Column -->
             <div class="col-md-4">
                 <h3>Contact Details</h3>
                 <p>
-                <!-- rating star -->
-                <!-- <span class="rating">
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-5" name="rating-input-1">
-                    <label for="rating-input-1-5" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-4" name="rating-input-1">
-                    <label for="rating-input-1-4" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-3" name="rating-input-1">
-                    <label for="rating-input-1-3" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-2" name="rating-input-1">
-                    <label for="rating-input-1-2" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-1" name="rating-input-1">
-                    <label for="rating-input-1-1" class="rating-star"></label>
-                </span>
-                <button type="submit" class="btn btn-info btn-xs" style="margin-top: -15px;">rate</button> -->
-
                 <!-- click like -->
-                <p><button type="submit" class="btn btn-danger btn-xs" onclick="clickCounter()">
+                <!-- <p><button type="submit" class="btn btn-danger btn-xs" onclick="clickCounter()">
                 <span class="glyphicon glyphicon-heart">LIKE</span></button>
-                <span id="result"></span></p>
+                <span id="result_timber"></span></p> -->
+
                     Timber Cafe Thailand<br>
                 </p>
                 <p><i class="fa fa-phone"></i> 
@@ -264,17 +283,18 @@ function clickCounter() {
                     }
                         $conn->close(); 
                 ?>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; "KANOMWANWAN"</p>
-                </div>
             </div>
-        </footer>
+        </div>
+
+        <hr>
 
     </div>
+            <!-- Footer -->
+  <div class="w3-container w3-padding-12">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12"></h3>
+    <b><u><a href="#top">กลับสู่ด้านบน ↑</a></b></u>
+    <p><br>Copyright © WhanWhan</p>
+  </div>
     <!-- /.container -->
 
     <!-- jQuery -->

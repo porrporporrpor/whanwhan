@@ -1,180 +1,271 @@
 <!DOCTYPE html>
 <html>
-<title>WhanWhan</title>
+<title>Whan Whan</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<style>
+	  body {
+	  font-family: 'Kanit', sans-serif;
+	  color: black;
+	}
+	h1, h2, h3 {
+	  font-family: 'Kanit', sans-serif;
+	  color: black;
+	}
+	a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+	}
+	a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+	}
+	a:hover {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+	}
+	a:active {
+    color: gray;
+    background-color: transparent;
+    text-decoration: underline;
+	}
+</style>
 <body>
 
-<!-- Navbar (sit on top) -->
+<!-- Navbar -->
 <div class="w3-top">
-  <ul class="w3-navbar w3-white w3-wide w3-padding-8">
-    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-      <a class="w3-dropdown-click w3-hover-white w3-small w3-white" href="javascript:void(0);" onclick="myFunction()" title="Menu">
-      <i class="fa fa-bars"></i></a>
-    </li>
-    <li>
-      <a href="#home" class="w3-margin-left"><b>WH</b> WhanWhan</a>
-    </li>
-    <!-- Float links to the right. Hide them on small screens -->
-    <li class="w3-right w3-hide-small">
-    <a href="#hot" class="w3-left">Hot</a>
-      <a href="#sweets" class="w3-left">Sweets</a>
-      <a href="#shop" class="w3-left">Shop</a>
-      <a href="#admin" class="w3-left w3-margin-right">Admin</a>
-    </li>
-  </ul>
+ <ul class="w3-navbar w3-left-align w3-large w3-black">
+	<a href="javascript:void(0);" onclick="openNav()">
+		<i class="w3-hide-medium w3-hide-large w3-hover-black fa fa-bars w3-black w3-display-right w3-margin-right"></i>
+	</a>
+ <li>
+	<a href="index.html" class="w3-large w3-margin-left w3-medium w3-left w3-hover-white w3-text-white w3-padding-12"><b>WH</b> WhanWhan</a>
+  </li>
+   <li class="w3-right w3-hide-small">
+		<a href="#hot" class="w3-left w3-medium w3-hover-white w3-text-white w3-padding-12">Hot</a>
+	  <a href="#shop" class="w3-left w3-medium w3-hover-white w3-text-white w3-padding-12">Shop</a>
+	  <a href="admin.html" class="w3-left w3-medium w3-hover-white w3-text-white w3-padding-12">Admin</a>
+						<!-- search box -->
+						<form class="navbar-form navbar-form-sm navbar-right w3-left w3-margin-right w3-hide-medium" method=GET action="http://www.google.co.th/search">
+							<div class="form-group form-group-sm">
+							  <input type="text" name=q class="form-control" placeholder="Search" value="">
+							</div>
+							<button type="submit" class="btn btn-default btn-sm">
+								<span class="fa fa-search" aria-hidden="true"></span>
+							</button>
+						</form>
+					</li>
+ </ul>
 </div>
 
 <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium" style="margin-top:60px">
-    <ul class="w3-navbar w3-left-align w3-small w3-gray">
-      <li><a class="w3-padding-small" href="#hot">Hot</a></li>
-      <li><a class="w3-padding-small" href="#sweets">Sweets</a></li>
-      <li><a class="w3-padding-small" href="#shop">Shop</a></li>
-      <li><a class="w3-padding-small" href="#admin">Admin</a></li>
-    </ul>
-  </div>
+<div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top w3-white w3-opacity" style="margin-top:50px">
+  <ul class="w3-navbar w3-left-align w3-medium">
+	<li><a class="w3-padding-large w3-text-black" href="#hot" onclick="openNav().close()"><b>Hot</b></a></li>
+	<li><a class="w3-padding-large w3-text-black" href="#shop" onclick="openNav().close()"><b>Shop</b></a></li>
+	<li><a class="w3-padding-large w3-text-black" href="admin.html" onclick="openNav().close()"><b>Admin</b></a></li>
+  </ul>
+</div>
 
 <!-- Header -->
-<header class="w3-display-container w3-content w3-wide " style="max-width:1500px;margin-top:40px" id="home">
-  <img class="w3-image w3-opacity-min mySlides" src="D:\AAngel\Project - ITF\Photo\p_05.jpg" alt="WhanWhan" width="1500" height="1000">
-  <img class="w3-image w3-opacity-min mySlides" src="D:\AAngel\Project - ITF\Photo\p_02.jpg" alt="WhanWhan" width="1500" height="1000">
-  <img class="w3-image w3-opacity-min mySlides" src="D:\AAngel\Project - ITF\Photo\p_06.jpg" alt="WhanWhan" width="1500" height="1000">
-  <img class="w3-image w3-opacity-min mySlides" src="D:\AAngel\Project - ITF\Photo\p_03.jpg" alt="WhanWhan" width="1500" height="1000">
-  <img class="w3-image w3-opacity-min mySlides" src="D:\AAngel\Project - ITF\Photo\p_07.jpg" alt="WhanWhan" width="1500" height="1000">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge"><span class="w3-border w3-border-black w3-xlage">WH</span> <span class="w3-hide-small">WhanWhan</span></h1>
+<div class="w3-content w3-display-container" id="top" style="max-width:100%;margin-top:35px">
+  <img class="mySlides w3-opacity-min" src="Photo\Slide\1.jpg" style="width:100%">
+  <img class="mySlides w3-opacity-min" src="Photo\Slide\2.jpg" style="width:100%">
+  <img class="mySlides w3-opacity-min" src="Photo\Slide\3.jpg" style="width:100%">
+  <img class="mySlides w3-opacity-min" src="Photo\Slide\4.jpg" style="width:100%">
+  <img class="mySlides w3-opacity-min" src="Photo\Slide\5.jpg" style="width:100%">
+  <img class="mySlides w3-opacity-min" src="Photo\Slide\6.jpg" style="width:100%">
+  <img class="mySlides w3-opacity-min" src="Photo\Slide\7.jpg" style="width:100%">
+  <img class="mySlides w3-opacity-min" src="Photo\Slide\8.jpg" style="width:100%">
+  <div class="w3-center w3-section w3-large w3-text-white w3-display-bottommiddle w3-xxlarge w3-hide-small" style="width:100%">
+	<div class="w3-left w3-padding-left w3-hover-text-gray" onclick="plusDivs(-1)">&#10094;</div>
+	<div class="w3-right w3-padding-right w3-hover-text-gray" onclick="plusDivs(1)">&#10095;</div>
+	<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+	<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+	<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+	<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+	<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+	<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(6)"></span>
+	<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(7)"></span>
+	<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(8)"></span>
   </div>
-  <div class="w3-center w3-section w3-jumbo w3-text-white w3-display-bottommiddle" style="width:100%">
-    <div class="w3-left w3-padding-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-    <div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-</header>
+  <div class="w3-center w3-section w3-large w3-text-white w3-display-bottommiddle w3-large w3-hide-large w3-hide-medium" style="width:100%">
+	<div class="w3-left w3-padding-left w3-hover-text-gray" onclick="plusDivs(-1)">&#10094;</div>
+	<div class="w3-right w3-padding-right w3-hover-text-gray" onclick="plusDivs(1)">&#10095;</div>
+  </div>
+  <div class="w3-display-middle w3-margin-top w3-center">
+	<h1 class="w3-xxlarge"><span class="w3-hide-small w3-border w3-border-black">WH</span><span class="w3-xxlarge w3-hide-small">WhanWhan</span></h1>
+	<h1 class="w3-xlarge"><span class="w3-hide-large w3-hide-medium w3-border w3-border-black">WH</span><span class="w3-xlarge w3-hide-large w3-hide-medium">WhanWhan</span></h1>
+  </div>
+</div>
+
+
 
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
 
  <!-- Hot Section -->
   <div class="w3-container w3-padding-32" id="hot">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Hots!</h3>
+	<h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">HOT!</h3>
   </div>
    <!-- First Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    <div class="w3-quarter">
-      <img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
-      <h3>The Perfect Sandwich, A Real NYC Classic</h3>
-      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/steak.jpg" alt="Steak" style="width:100%">
-      <h3>Let Me Tell You About This Steak</h3>
-      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/cherries.jpg" alt="Cherries" style="width:100%">
-      <h3>Cherries, interrupted</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-      <p>What else?</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/wine.jpg" alt="Pasta and Wine" style="width:100%">
-      <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
+	<div class="w3-quarter">
+	<a href="milkfactory.php">
+	  <img src="Photo\Milk Factory\Milk Factory_5195_2.jpg" class="w3-hover-opacity" alt="Toast" style="width:100%">
+	</a>
+	  <a href="milkfactory.php"><h3>Milk Factory</h3></a>
+	  <p>นม กาแฟ ขนมหวานอร่อยๆ พื้นที่นั่งคุย ที่ถ่ายรูปสวยๆ ต้องร้านนี้เลยยย</p>
+	</div>
+	<div class="w3-quarter">
+		<a href="timber.php">
+	  <img src="Photo\Timber\Timber_2.jpg" class="w3-hover-opacity" alt="Waffle" style="width:100%">
+	  </a>
+	  <a href="timber.php"><h3>Timber Café</h3></a>
+	  <p>ขนมทานเล่น เครื่องดื่มหวานๆ อาหารจานหลักก็มี ที่ถ่ายรูปเก๋ๆก็มาาา</p>
+	</div>
+	<div class="w3-quarter">
+		<a href="atladkrabang.php">
+	  	<img src="Photo\Na Ladkrabang\naladkrabang.jpg" class="w3-hover-opacity" alt="Toast" style="width:100%">
+	  </a>
+	  <a href="atladkrabang.php"><h3>ณ ลาดกระบัง</h3></a>
+	  <p>คาเฟ่ริมคลอง บรรยากาศชิวๆ รับลมธรรมชาติ</p>
+	</div>
+	<div class="w3-quarter">
+	<a href="lamun.php">
+	  <img src="Photo\Lamoon\cake.jpg" class="w3-hover-opacity" alt="Blueberry Cake" style="width:100%">
+	</a>
+	  <a href="lamun.php"><h3>ละมุน</h3></a>
+	  <p>ร้านเค้กเล็กๆน่ารัก บรรยากาศอบอุ่น รสชาติเค้กละมุนนนนถูกปาก</p>
+	</div>
   </div>
 
-  <!-- Sweets Section -->
-  <div class="w3-container w3-padding-32" id="sweets">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Sweets</h3>
-  </div>
-   <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    <div class="w3-quarter">
-      <img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
-      <h3>The Perfect Sandwich, A Real NYC Classic</h3>
-      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/steak.jpg" alt="Steak" style="width:100%">
-      <h3>Let Me Tell You About This Steak</h3>
-      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/cherries.jpg" alt="Cherries" style="width:100%">
-      <h3>Cherries, interrupted</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-      <p>What else?</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/wine.jpg" alt="Pasta and Wine" style="width:100%">
-      <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-  </div>
 
   <!-- Shop Section -->
-  <div class="w3-container w3-padding-32" id="hot">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Shop</h3>
+  <div class="w3-container w3-padding-32" id="shop">
+	<h3 class="w3-border-bottom w3-border-light-grey w3-padding-12">Shop</h3>
   </div>
    <!-- Thirth Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    <div class="w3-quarter">
-      <img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
-      <h3>The Perfect Sandwich, A Real NYC Classic</h3>
-      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/steak.jpg" alt="Steak" style="width:100%">
-      <h3>Let Me Tell You About This Steak</h3>
-      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/cherries.jpg" alt="Cherries" style="width:100%">
-      <h3>Cherries, interrupted</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-      <p>What else?</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/wine.jpg" alt="Pasta and Wine" style="width:100%">
-      <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
+	<div class="w3-quarter">
+	<a href="timber.php">
+	  <img src="Photo\Timber\shop.jpg" class="w3-hover-opacity" alt="shop pic" style="width:100%">
+	</a>
+	  <a href="timber.php"><h3>Timber Café</h3></a>
+	  <p>Location: ซอย ฉลองกรุง 1 กรุงเทพมหานคร (อยู่ในซอยเกกี เลยวัดปลูกเข้ามา อยู่ก่อนถึง RNP)</p>
+	</div>
+	<div class="w3-quarter">
+	<a href="lamun.php">
+	  <img src="Photo\Lamoon\shop.jpg" class="w3-hover-opacity" alt="shop pic" style="width:100%">
+	</a>
+	   <a href="lamun.php"><h3>ละมุน</h3></a>
+	   <p>Location: ถนน ฉลองกรุง กรุงเทพมหานคร เลี้ยวเข้าเทคโนฯ พระจอมเกล้า</p>
+	</div>
+	<div class="w3-quarter">
+	<a href="milkfactory.php">
+	  <img src="Photo\Milk Factory\shop.jpg" class="w3-hover-opacity" alt="shop pic" style="width:100%">
+	</a>
+	  <a href="milkfactory.php"><h3>Milk Factory</h3></a>
+	   <p>Location: ถ.ฉลองกรุง 1 แขวงลาดกระบัง เขตลาดกระบัง กรุงเทพมหานคร</p>
+	</div>
+	<div class="w3-quarter">
+	<a href="atladkrabang.php">
+	  <img src="Photo\Na Ladkrabang\shop.jpg" class="w3-hover-opacity" alt="shop pic" style="width:100%">
+	</a>
+	  <a href="atladkrabang.php"><h3>ณ ลาดกระบัง</h3></a>
+	  <p>Location: ถนน หลวงแพ่ง กรุงเทพมหานคร (อยู่หลังตลาดหัวตะเข้ เดินเข้าซอยข้างเซเว่น เดินตรงมาเรื่อยๆข้ามสะพาน แล้วเลี้ยวขวา เดินตรงมาก็จะเจอร้าน)</p>
+	</div>
+  </div>
+  <a href="shop.html">
+  	<button class="w3-right w3-brown w3-opacity w3-btn w3-round-xxlarge w3-large">more ...</button>
+  </a>
+  <br>
+  <div class="w3-container w3-padding-12">
+	<h3 class="w3-border-bottom w3-border-light-grey w3-padding-12"></h3>
+	<b><u><a href="#top">กลับสู่ด้านบน ↑</a></b></u>
+	<br>
+	<br>
+	<p>Copyright © WhanWhan</p>
   </div>
 
-<script>
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function myFunction() {
-        var x = document.getElementById("navDemo");
-        if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-        } else {
-            x.className = x.className.replace(" w3-show", "");
-        }
-    }
 
-    var slideIndex = 1;
-    showDivs(slideIndex);
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
-    function currentDiv(n) {
-      showDivs(slideIndex = n);
-    }
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      if (n > x.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-         dots[i].className = dots[i].className.replace(" w3-white", "");
-      }
-      x[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " w3-white";
-    }
-  </script>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+	 x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+	 dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-white";
+}
+
+function openNav() {
+	var x = document.getElementById("navDemo");
+	if (x.className.indexOf("w3-show") == -1) {
+		x.className += " w3-show";
+	} else {
+		x.className = x.className.replace(" w3-show", "");
+	}
+}
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+
+</script>
+
 </body>
 </html>

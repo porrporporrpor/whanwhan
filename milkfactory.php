@@ -26,7 +26,7 @@ $result = $conn->query($sql);
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>WhanWhan</title>
+    <title>Whan Whan</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -56,47 +56,78 @@ $result = $conn->query($sql);
     <![endif]-->
 
 <!-- for count like -->
-<script>
+<!-- <script>
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount)+1;
-            // clear click count
-            // localStorage.clear();
+            localStorage.clickcount = Number(locปalStorage.clickcount)+1;
         } else {
             localStorage.clickcount = 1;
         }
-        document.getElementById("result").innerHTML = ""+ localStorage.clickcount;
+        document.getElementById("result_milk").innerHTML = "" + localStorage.clickcount;
     } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        document.getElementById("result_milk").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
-</script>
+</script> -->
+
+<style>
+      body {
+      font-family: 'Kanit', sans-serif;
+      color: black;
+    }
+    h1, h3 {
+      font-family: 'Kanit', sans-serif;
+      color: black;
+    }
+    a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+    }
+    }
+    a:hover {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+    }
+    a:active {
+    color: gray;
+    background-color: transparent;
+    text-decoration: underline;
+    }
+</style>
 
 </head>
 
 <body>
 
-    <!-- Navbar (sit on top) -->
+<!-- Navbar -->
 <div class="w3-top">
-  <ul class="w3-navbar w3-black w3-wide w3-padding-8">
-    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-      <a class="w3-dropdown-click w3-hover-white w3-small w3-white" href="javascript:void(0);" onclick="myFunction()" title="Menu">
-      <i class="fa fa-bars"></i></a>
-    </li>
-
-    <li>
-      <a href="index.html" class="w3-margin-left"><b>WH</b> WhanWhan</a>
-    </li>
-    <!-- Float links to the right. Hide them on small screens -->
-    <li class="w3-right w3-small">
-      <a href="milkfactory.php" class="w3-left">milk factory</a>
-      <a href="timber.php" class="w3-left">timber</a>
-      <a href="atladkrabang.php" class="w3-left">ณ ลาดกระบัง</a>
-      <a href="lamun.php" class="w3-left">ละมุน</a>
-      <a href="bancha.php" class="w3-left w3-margin-right">สถานีบ้านชา</a>
-    </li>
-      </ul>
+ <ul class="w3-navbar w3-left-align w3-large w3-black">
+    <a href="javascript:void(0);" onclick="openNav()">
+        <i class="w3-hide-medium w3-hide-large w3-hover-black fa fa-bars w3-black w3-display-right w3-margin-right"></i>
+    </a>
+ <li>
+    <a href="index.html" class="w3-large w3-margin-left w3-medium w3-left w3-hover-white w3-text-white w3-padding-12"><b>WH</b> WhanWhan</a>
+  </li>
+   <li class="w3-right w3-small">
+      <a href="milkfactory.php" class="w3-left" style="margin-top: 7px">milk factory</a>
+      <a href="timber.php" class="w3-left" style="margin-top: 7px">timber</a>
+      <a href="atladkrabang.php" class="w3-left" style="margin-top: 7px">ณ ลาดกระบัง</a>
+      <a href="lamun.php" class="w3-left" style="margin-top: 7px">ละมุน</a>
+      <a href="bancha.php" class="w3-left" style="margin-top: 7px">สถานีบ้านชา</a>
+                        <!-- search box -->
+                        <form class="navbar-form navbar-form-sm navbar-right w3-left w3-margin-right w3-hide-medium" method=GET action="http://www.google.co.th/search">
+                            <div class="form-group form-group-sm">
+                              <input type="text" name=q class="form-control" placeholder="Search" value="">
+                            </div>
+                            <button type="submit" class="btn btn-default btn-sm">
+                                <span class="fa fa-search" aria-hidden="true"></span>
+                            </button>
+                        </form>
+                    </li>
+ </ul>
 </div>
 
 
@@ -158,53 +189,39 @@ function clickCounter() {
             <!-- Map Column -->
             <div class="col-md-8">
             <!-- content -->
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;วันนี้หมูพริ้วจะพาทุกคนไปนั่งชิคค์ๆชิลล์ๆที่คาเฟ่ต์ฮิปๆย่านลาดกระบังด้วยกันนะฮะ
-ร้านนี้มีพิกัดอยู่ในซอยฉลองกรุง1 ตรงเข้าไปข้ามสะพานตรงไปอีกอยู่ซ้ายมืออยู่ตรง"ตลาดนัดเทคโน"ด้านในสุด (พิกัดเอามาจากเพจร้านนะฮะ พิกัดเดิมผมเข้าใจผิดเดี๋ยวจะหลงกันฮะ ขอโทษด้วยนะฮะ) 
-ซึ่งอยู่ใกล้ๆทางรถไฟสถานีเจ้าคุณทหารนั่นเองจ้า ถ้าไปไม่ถูกลองแวะถามคนแถวนั้นได้ 
-เด็กลาดกระบังน่าจะรู้จักซอยนี้กันดี เพราะของกินอร่อยๆเยอะมากกกกกกกกก
-โดยคาเฟ่ต์นี้จะมีขายทั้งอาหารจานเดียว เครื่องดื่ม ของทานเล่น และขนมหวานมากมายหลายชนิดเลยด้วย เริ่ดมากเลยอ่ะแก</p>
-            <!-- picture row1 -->
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg" height="30%" width="30%"></a></p>
-            <!-- picture row2 -->
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg" height="30%" width="30%"></a></p>
-            <!-- picture row3 -->
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg" height="30%" width="30%"></a></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;คาเฟ่สุดแนว บรรยากาศน่านั่ง ถ่ายรูปสวย ซึ่งหวานหวานจะพาไปรู้จัก นั่นก็คือร้าน Milk Factory แค่ชื่อก็น่าไปแล้ว อ่ะๆๆหวานหวานอยากจะบอกว่าร้านนี้มีสองชั้นด้วยน้าาา แถมยังเป็นร้านกระจกที่มองออกไปข้างนอกได้ด้วย ชักจะอยากเห็นกันแล้วใช่ไหมคะ แต่ช้าก่อนเรามาพูดถึงเรื่องอาหารกันก่อนดีกว่า ชื่อร้านถึงจะบอกว่าเป็นร้านนมแต่ว่าก็มีอาหารจานหลักขายด้วยนะะ ของหวานก็มีด้วย ถ้าจะให้พูดถึงรสชาติแล้ว หวานหวานแนะนำให้มาโดนด้วยตัวเองเลยย ไม่ผิดหวังแน่นอนนน
+</p>
+            <!-- picture 1 -->
+            <br>
+            <p align="center"><a href="https://www.img.in.th/images/8bf58330da6f927a89e10dc92a732223.jpg"><img src="https://www.img.in.th/images/8bf58330da6f927a89e10dc92a732223.jpg" height="90%" width="90%"></a>
+            <!-- picture 2 -->
+            <p align="center"><a href="https://www.img.in.th/images/35b292494dcfea72459cdb03addbfe62.jpg"><img src="https://www.img.in.th/images/35b292494dcfea72459cdb03addbfe62.jpg" height="90%" width="90%"></a>
+            <!-- picture 3 -->
+            <p align="center"><a href="https://www.img.in.th/images/5c9a7b445e4b582c79303eb9de4d81d8.jpg"><img src="https://www.img.in.th/images/5c9a7b445e4b582c79303eb9de4d81d8.jpg" height="90%" width="90%"></a>
+            <!-- picture 4 -->
+            <p align="center"><a href="https://www.img.in.th/images/0ec8efd0c6a98f02409c593837571c13.jpg"><img src="https://www.img.in.th/images/0ec8efd0c6a98f02409c593837571c13.jpg" height="90%" width="90%"></a>
+            <!-- picture 5 -->
+            <p align="center"><a href="https://www.img.in.th/images/ae2008d87116d45c0af5c27c6f6a2b54.jpg"><img src="https://www.img.in.th/images/ae2008d87116d45c0af5c27c6f6a2b54.jpg" height="90%" width="90%"></a>
+            <!-- picture 6 -->
+            <p align="center"><a href="https://www.img.in.th/images/730c10610648453288013e45af8fb641.jpg"><img src="https://www.img.in.th/images/730c10610648453288013e45af8fb641.jpg" height="90%" width="90%"></a>
+            <!-- picture 7 -->
+            <p align="center"><a href="https://www.img.in.th/images/3fbb34433bb9ac540193e23615627853.jpg"><img src="https://www.img.in.th/images/3fbb34433bb9ac540193e23615627853.jpg" height="90%" width="90%"></a>
+            <!-- picture 8 -->
+            <p align="center"><a href="https://www.img.in.th/images/fce2a3397198882215573352a4b5b22f.jpg"><img src="https://www.img.in.th/images/fce2a3397198882215573352a4b5b22f.jpg" height="90%" width="90%"></a>
+            <!-- picture 9 -->
+            <p align="center"><a href="https://www.img.in.th/images/d557683e3db132967289b9dbbd0dc867.jpg"><img src="https://www.img.in.th/images/d557683e3db132967289b9dbbd0dc867.jpg" height="90%" width="90%"></a>
+            
 
             </div>
             <!-- Contact Details Column -->
             <div class="col-md-4">
                 <h3>Contact Details</h3>
                 <p>
-            <!-- rating star -->
-                <!-- <span class="rating">
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-5" name="rating-input-1">
-                    <label for="rating-input-1-5" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-4" name="rating-input-1">
-                    <label for="rating-input-1-4" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-3" name="rating-input-1">
-                    <label for="rating-input-1-3" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-2" name="rating-input-1">
-                    <label for="rating-input-1-2" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-1" name="rating-input-1">
-                    <label for="rating-input-1-1" class="rating-star"></label>
-                </span>
-                <button type="submit" class="btn btn-info btn-xs" style="margin-top: -15px;">rate</button> -->
 
                 <!-- click like -->
-                <p><button type="submit" class="btn btn-danger btn-xs" onclick="clickCounter()">
+                <!-- <p><button type="submit" class="btn btn-danger btn-xs" onclick="clickCounter()">
                 <span class="glyphicon glyphicon-heart">LIKE</span></button>
-                <span id="result"></span></p>
+                <span id="result_milk"></span></p> -->
 
                     Milk Factory<br>
                 </p>
@@ -267,21 +284,20 @@ function clickCounter() {
                     }
                         $conn->close(); 
                 ?>
+                
             </div>
         </div>
 
         <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; "KANOMWANWAN"</p>
-                </div>
-            </div>
-        </footer>
-
     </div>
+            <!-- Footer -->
+  <div class="w3-container w3-padding-12">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12"></h3>
+    <b><u><a href="#top">กลับสู่ด้านบน ↑</a></b></u>
+    <p><br>Copyright © WhanWhan</p>
+  </div>
+
     <!-- /.container -->
 
     <!-- jQuery -->
@@ -294,6 +310,7 @@ function clickCounter() {
     <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
+
     <script>
     // Used to toggle the menu on small screens when clicking on the menu button
     function myFunction() {
@@ -329,6 +346,9 @@ function clickCounter() {
       dots[slideIndex-1].className += " w3-white";
     }
   </script>
+
+
+</script>
 
 </body>
 

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<title>Whan Whan</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<style>
+    body {
+    font-family: 'Kanit', sans-serif;
+    color: black;
+  }
+  h1, h2, h3 {
+    font-family: 'Kanit', sans-serif;
+    color: black;
+  }
+  a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color: gray;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+</style>
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <ul class="w3-navbar w3-left-align w3-large w3-black">
+  <a href="javascript:void(0);" onclick="openNav()">
+    <i class="w3-hide-medium w3-hide-large w3-hover-black fa fa-bars w3-black w3-display-right w3-margin-right"></i>
+  </a>
+ <li>
+  <a href="index.html" class="w3-large w3-margin-left w3-medium w3-left w3-hover-white w3-text-white w3-padding-12"><b>WH</b> WhanWhan</a>
+  </li>
+   <li class="w3-right w3-hide-small">
+    <a href="index.html" class="w3-left w3-medium w3-hover-white w3-text-white w3-padding-12">Main</a>
+    <a href="shop.html" class="w3-left w3-medium w3-hover-white w3-text-white w3-padding-12">Shop</a>
+    <a href="admin.html" class="w3-left w3-medium w3-hover-white w3-text-white w3-padding-12">Admin</a>
+            <!-- search box -->
+            <form class="navbar-form navbar-form-sm navbar-right w3-left w3-margin-right w3-hide-medium" method=GET action="http://www.google.co.th/search">
+              <div class="form-group form-group-sm">
+                <input type="text" name=q class="form-control" placeholder="Search" value="">
+              </div>
+              <button type="submit" class="btn btn-default btn-sm">
+                <span class="fa fa-search" aria-hidden="true"></span>
+              </button>
+            </form>
+          </li>
+ </ul>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top w3-white w3-opacity" style="margin-top:50px">
+  <ul class="w3-navbar w3-left-align w3-medium">
+  <li><a class="w3-padding-large w3-text-black" href="index.html" onclick="openNav().close()"><b>Main</b></a></li>
+  <li><a class="w3-padding-large w3-text-black" href="shop.html" onclick="openNav().close()"><b>Shop</b></a></li>
+  <li><a class="w3-padding-large w3-text-black" href="admin.html" onclick="openNav().close()"><b>Admin</b></a></li>
+  </ul>
+</div>
+
+<!-- Header -->
+  <header class="w3-container w3-bottombar" id="shop" style="margin-top:50px">
+    <h1><b>Admin</b></h1>
+  </header>
+  <br>
+  <br>
+
+ <div class="w3-row">
+  <div class="w3-container w3-center w3-half">
+    <a href="https://www.facebook.com/patty.pt2">
+      <img src="Photo/Admin/koala.jpg" alt="koala" style="width:200px" class="w3-hover-opacity w3-circle">
+    </a>
+    <h3>ธัญพิชชา อุบลวิรัตนา</h3>
+    <h4>59070078</h4>
+    <h4>IG: arspatt</h4>
+  </div>
+
+  
+  <div class="w3-half w3-center w3-container">
+  <a href="https://www.facebook.com/porrporporrpor">
+  <img src="Photo/Admin/chipmunk.jpg" alt="chipmunk" style="width:200px" class="w3-hover-opacity w3-circle">
+  </a>
+    <h3>เบญจวรรณ ซิ้มพัฒนวงษ์</h3>
+    <h4>59070093</h4>
+    <h4>IG: ppor.s</h4>
+  </div>
+</div>
+<br>
+<br>
+<br>
+ <div class="w3-row">
+  <div class="w3-third w3-center w3-container">
+    <a href="https://www.facebook.com/ppraewpanida">
+    <img src="Photo/Admin/beagle.jpg" alt="beagle" style="width:200px" class="w3-hover-opacity w3-circle">
+    </a>
+    <h3>ปณิดา ตั้งจิตมั่นสกุล</h3>
+    <h4>59070094</h4>
+    <h4>IG: ppraewpanida</h4>
+  </div>
+  <div class="w3-third w3-center w3-container">
+    <a href="https://www.facebook.com/kukkik41">
+    <img src="Photo/Admin/panda.jpg" alt="Norway" style="width:200px" class="w3-hover-opacity w3-circle">
+    </a>
+    <h3>พัชรพร เลิศวิรุฬห์</h3>
+    <h4>59070117</h4>
+    <h4>IG: kukkik.pl</h4>
+  </div>
+  <div class="w3-third w3-center w3-container">
+  <a href="https://www.facebook.com/angel.pimpitcha">
+    <img src="Photo/Admin/rabbit.jpg" alt="Norway" style="width:200px" class="w3-hover-opacity w3-circle">
+  </a>
+    <h3>พิมพ์พิชชา ปิติโชติโชคโภคิน</h3>
+    <h4>59070120</h4>
+    <h4>IG: -</h4>
+  </div>
+</div>
+
+
+  <div class="w3-container w3-padding-12">
+  <h3 class="w3-border-bottom w3-border-gray w3-padding-12"></h3>
+  <p>Copyright © WhanWhan</p>
+  </div>
+
+<script>
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+</body>
+</html>

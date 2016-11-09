@@ -26,7 +26,7 @@ $result = $conn->query($sql);
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>WhanWhan</title>
+    <title>Whan Whan</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -56,47 +56,78 @@ $result = $conn->query($sql);
     <![endif]-->
 
 <!-- for count like -->
-    <script>
+<!-- <script>
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount)+1;
-            // clear click count
-            // localStorage.clear();
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
         } else {
-            localStorage.clickcount = 1;
+            sessionStorage.clickcount = 1;
         }
-        document.getElementById("result").innerHTML = ""+ localStorage.clickcount;
+        document.getElementById("result_bancha").innerHTML = "" + sessionStorage.clickcount;
     } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        document.getElementById("result_bancha").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
-</script>
+</script> -->
+
+<style>
+      body {
+      font-family: 'Kanit', sans-serif;
+      color: black;
+    }
+    h1, h3 {
+      font-family: 'Kanit', sans-serif;
+      color: black;
+    }
+    a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+    }
+    }
+    a:hover {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+    }
+    a:active {
+    color: gray;
+    background-color: transparent;
+    text-decoration: underline;
+    }
+</style>
 
 </head>
 
 <body>
 
-    <!-- Navbar (sit on top) -->
+<!-- Navbar -->
 <div class="w3-top">
-  <ul class="w3-navbar w3-black w3-wide w3-padding-8">
-    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-      <a class="w3-dropdown-click w3-hover-white w3-small w3-white" href="javascript:void(0);" onclick="myFunction()" title="Menu">
-      <i class="fa fa-bars"></i></a>
-    </li>
-
+ <ul class="w3-navbar w3-left-align w3-large w3-black">
+    <a href="javascript:void(0);" onclick="openNav()">
+        <i class="w3-hide-medium w3-hide-large w3-hover-black fa fa-bars w3-black w3-display-right w3-margin-right"></i>
+    </a>
     <li>
-      <a href="index.html" class="w3-margin-left"><b>WH</b> WhanWhan</a>
+    <a href="index.html" class="w3-large w3-margin-left w3-medium w3-left w3-hover-white w3-text-white w3-padding-12"><b>WH</b> WhanWhan</a>
+  </li>
+   <li class="w3-right w3-small">
+      <a href="milkfactory.php" class="w3-left" style="margin-top: 7px">milk factory</a>
+      <a href="timber.php" class="w3-left" style="margin-top: 7px">timber</a>
+      <a href="atladkrabang.php" class="w3-left" style="margin-top: 7px">ณ ลาดกระบัง</a>
+      <a href="lamun.php" class="w3-left" style="margin-top: 7px">ละมุน</a>
+      <a href="bancha.php" class="w3-left" style="margin-top: 7px">สถานีบ้านชา</a>
+        <!-- search box -->
+        <form class="navbar-form navbar-form-sm navbar-right w3-left w3-margin-right w3-hide-medium" method=GET action="http://www.google.co.th/search">
+            <div class="form-group form-group-sm">
+                <input type="text" name=q class="form-control" placeholder="Search" value="">
+            </div>
+            <button type="submit" class="btn btn-default btn-sm">
+                <span class="fa fa-search" aria-hidden="true"></span>
+            </button>
+        </form>
     </li>
-    <!-- Float links to the right. Hide them on small screens -->
-    <li class="w3-right w3-small">
-      <a href="milkfactory.php" class="w3-left">milk factory</a>
-      <a href="timber.php" class="w3-left">timber</a>
-      <a href="atladkrabang.php" class="w3-left">ณ ลาดกระบัง</a>
-      <a href="lamun.php" class="w3-left">ละมุน</a>
-      <a href="bancha.php" class="w3-left w3-margin-right">สถานีบ้านชา</a>
-    </li>
-      </ul>
+ </ul>
 </div>
 
 
@@ -109,36 +140,37 @@ function clickCounter() {
             <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="fill" style="background-image:url('http://f.ptcdn.info/784/037/000/nyglw3js679wdUPh5HV-o.jpg');"></div>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill" style="background-image:url('https://www.img.in.th/images/379d6261541535e47a067b01630e203b.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Timber Cafe</h2>
+                    <h2>สถานีบ้านชา</h2>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg');"></div>
-                <div class="carousel-caption">
-                    <h2>Timber Cafe</h2>
-                </div>
+                <div class="fill" style="background-image:url('https://www.img.in.th/images/287db34d553630a95ce1dde8e4e2e476.jpg');"></div>
+            <div class="carousel-caption">
+                <h2>สถานีบ้านชา</h2>
             </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://f.ptcdn.info/785/037/000/nygmcrn80kiz521XL09-o.jpg');"></div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url('https://www.img.in.th/images/9ca49cf16b54db93aefbc64b79082464.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Timber Cafe</h2>
+                    <h2>สถานีบ้านชา</h2>
                 </div>
             </div>
         </div>
 
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-    </header>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+
+</header>
 
     <!-- Page Content -->
     <div class="container">
@@ -157,53 +189,37 @@ function clickCounter() {
             <!-- Map Column -->
             <div class="col-md-8">
             <!-- content -->
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;วันนี้หมูพริ้วจะพาทุกคนไปนั่งชิคค์ๆชิลล์ๆที่คาเฟ่ต์ฮิปๆย่านลาดกระบังด้วยกันนะฮะ
-ร้านนี้มีพิกัดอยู่ในซอยฉลองกรุง1 ตรงเข้าไปข้ามสะพานตรงไปอีกอยู่ซ้ายมืออยู่ตรง"ตลาดนัดเทคโน"ด้านในสุด (พิกัดเอามาจากเพจร้านนะฮะ พิกัดเดิมผมเข้าใจผิดเดี๋ยวจะหลงกันฮะ ขอโทษด้วยนะฮะ) 
-ซึ่งอยู่ใกล้ๆทางรถไฟสถานีเจ้าคุณทหารนั่นเองจ้า ถ้าไปไม่ถูกลองแวะถามคนแถวนั้นได้ 
-เด็กลาดกระบังน่าจะรู้จักซอยนี้กันดี เพราะของกินอร่อยๆเยอะมากกกกกกกกก
-โดยคาเฟ่ต์นี้จะมีขายทั้งอาหารจานเดียว เครื่องดื่ม ของทานเล่น และขนมหวานมากมายหลายชนิดเลยด้วย เริ่ดมากเลยอ่ะแก</p>
-            <!-- picture row1 -->
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg" height="30%" width="30%"></a></p>
-            <!-- picture row2 -->
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg" height="30%" width="30%"></a></p>
-            <!-- picture row3 -->
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglx2tjtsqsSm6rQGe-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzjn6vqbmNQGFHKh-o.jpg" height="30%" width="30%"></a>
-            &nbsp;&nbsp;&nbsp;<a href="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg"><img src="http://f.ptcdn.info/784/037/000/nyglzwoyph4n7WMb16r-o.jpg" height="30%" width="30%"></a></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;พูดถึงลาดกระบังก็ต้องนึกถึงรถไฟ นึกถึงรถไฟก็ต้องนึกถึงสถานีรถไฟ วันนี้หวานหวานเลยจะพาทุกคนไปที่สถานีบ้านชากัน แต่เดี๋ยวก่อนค่ะ สถานีนี้ไม่ใช่สถานีที่ไว้รอรถไฟนะ แต่เป็นร้านที่ขายเครื่องดื่ม ขายอาหาร และยังมีขนมอีกด้วยยย น่าสนใจใช่มั้ยคะ จุดเด่นของร้านนี้คือ เป็นร้านเอาท์ดอร์ที่จะมีชาให้โต๊ะละหนึ่งกาซึ่งฟรีด้วยค่าา ชาอันนี้คือชาดำนั่นเอง อาหารอื่นๆก็ราคาไม่แพง เหมาะกับนักศึกษามากมาก ถ้าผ่านมาแถวนี้ก็อย่าลืมมาลองกันนะคะ</p>
+             <!-- picture 1 -->
+            <br>
+            <p align="center"><a href="http://www.mx7.com/i/dc7/uWcBf3.jpg"><img src="http://www.mx7.com/i/dc7/uWcBf3.jpg" height="90%" width="90%"></a>
+            <!-- picture 2 -->
+            <p align="center"><a href="http://www.mx7.com/i/c5a/AhMAc8.jpg"><img src="http://www.mx7.com/i/c5a/AhMAc8.jpg" height="90%" width="90%"></a>
+            <!-- picture 3 -->
+            <p align="center"><a href="http://www.mx7.com/i/98e/z2rZKe.jpg"><img src="http://www.mx7.com/i/98e/z2rZKe.jpg" height="90%" width="90%"></a>
+            <!-- picture 4 -->
+            <p align="center"><a href="http://www.mx7.com/i/b82/odq8OF.jpg"><img src="http://www.mx7.com/i/b82/odq8OF.jpg" height="90%" width="90%"></a>
+            <!-- picture 5 -->
+            <p align="center"><a href="http://www.mx7.com/i/934/y5FAd9.jpg"><img src="http://www.mx7.com/i/934/y5FAd9.jpg" height="90%" width="90%"></a>
+            <!-- picture 6 -->
+            <p align="center"><a href="http://www.mx7.com/i/c8d/HgF4x5.jpg"><img src="http://www.mx7.com/i/c8d/HgF4x5.jpg" height="90%" width="90%"></a>
+            <!-- picture 7 -->
+            <p align="center"><a href="http://www.mx7.com/i/9da/7Zd2lN.jpg"><img src="http://www.mx7.com/i/9da/7Zd2lN.jpg" height="90%" width="90%"></a>
+            <!-- picture 8 -->
+            <p align="center"><a href="http://www.mx7.com/i/bfa/9aJvVB.jpg"><img src="http://www.mx7.com/i/bfa/9aJvVB.jpg" height="90%" width="90%"></a>
+            <!-- picture 9 -->
+            <p align="center"><a href="http://www.mx7.com/i/14b/gyfpJl.jpg"><img src="http://www.mx7.com/i/14b/gyfpJl.jpg" height="90%" width="90%"></a>
 
             </div>
             <!-- Contact Details Column -->
             <div class="col-md-4">
                 <h3>Contact Details</h3>
                 <p>
-                <!-- rating star -->
-                <!-- <span class="rating">
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-5" name="rating-input-1">
-                    <label for="rating-input-1-5" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-4" name="rating-input-1">
-                    <label for="rating-input-1-4" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-3" name="rating-input-1">
-                    <label for="rating-input-1-3" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-2" name="rating-input-1">
-                    <label for="rating-input-1-2" class="rating-star"></label>
-                    <input type="radio" class="rating-input"
-                        id="rating-input-1-1" name="rating-input-1">
-                    <label for="rating-input-1-1" class="rating-star"></label>
-                </span>
-                <button type="submit" class="btn btn-info btn-xs" style="margin-top: -15px;">rate</button> -->
 
                 <!-- click like -->
-                <p><button type="submit" class="btn btn-danger btn-xs" onclick="clickCounter()">
+                <!-- <p><button type="submit" class="btn btn-danger btn-xs" onclick="clickCounter()">
                 <span class="glyphicon glyphicon-heart">LIKE</span></button>
-                <span id="result"></span></p>
+                <span id="result_bancha"></span></p> -->
                     สถานีบ้านชา<br>
                 </p>
                 <p><i class="fa fa-phone"></i> 
@@ -245,27 +261,8 @@ function clickCounter() {
 
                     <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
                 </form>
-                    <!-- <form role="form" action="comment.php" method="post">
-                        <div class="form-group">
-                            <label for="NameForm">
-                                Name :
-                            </label>
-                            <input name="name" type="text" class="form-control" id="NameForm">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="ContentForm">
-                                Message :
-                            </label>
-                            <textarea rows="10" cols="100" class="form-control" id="comment" style="resize:none"></textarea>
-                        </div>
-
-                    <button type="submit" class="btn btn-info">
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                    </button>
-                </form> -->
                 <br>
-                <!-- update comment from datqbase -->
+                <!-- update comment from database -->
                 <?php
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
@@ -286,23 +283,6 @@ function clickCounter() {
                 ?>
             </div>
         </div>
-                 <!--    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Name:</label>
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-                            <p class="help-block"></p>
-                        </div>
-                    </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Message:</label>
-                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
-                        </div>
-                    </div>
-                    <div id="success"></div> -->
-                    <!-- For success/fail messages -->
-                    <!-- <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button> 
-                </form>-->
             </div>
 
         </div>
@@ -310,16 +290,13 @@ function clickCounter() {
 
         <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; "KANOMWANWAN"</p>
-                </div>
-            </div>
-        </footer>
-
     </div>
+                <!-- Footer -->
+  <div class="w3-container w3-padding-12">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-12"></h3>
+    <b><u><a href="#top">กลับสู่ด้านบน ↑</a></b></u>
+    <p><br>Copyright © WhanWhan</p>
+  </div>
     <!-- /.container -->
 
     <!-- jQuery -->

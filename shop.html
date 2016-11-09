@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<title>Whan Whan</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<style>
+    body {
+    font-family: 'Kanit', sans-serif;
+    color: black;
+  }
+  h1, h2, h3 {
+    font-family: 'Kanit', sans-serif;
+    color: black;
+  }
+  a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color: gray;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+</style>
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <ul class="w3-navbar w3-left-align w3-large w3-black">
+  <a href="javascript:void(0);" onclick="openNav()">
+    <i class="w3-hide-medium w3-hide-large w3-hover-black fa fa-bars w3-black w3-display-right w3-margin-right"></i>
+  </a>
+ <li>
+  <a href="index.html" class="w3-large w3-margin-left w3-medium w3-left w3-hover-white w3-text-white w3-padding-12"><b>WH</b> WhanWhan</a>
+  </li>
+   <li class="w3-right w3-hide-small">
+    <a href="index.html" class="w3-left w3-medium w3-hover-white w3-text-white w3-padding-12">Main</a>
+    <a href="shop.html" class="w3-left w3-medium w3-hover-white w3-text-white w3-padding-12">Shop</a>
+    <a href="admin.html" class="w3-left w3-medium w3-hover-white w3-text-white w3-padding-12">Admin</a>
+            <!-- search box -->
+            <form class="navbar-form navbar-form-sm navbar-right w3-left w3-margin-right w3-hide-medium" method=GET action="http://www.google.co.th/search">
+              <div class="form-group form-group-sm">
+                <input type="text" name=q class="form-control" placeholder="Search" value="">
+              </div>
+              <button type="submit" class="btn btn-default btn-sm">
+                <span class="fa fa-search" aria-hidden="true"></span>
+              </button>
+            </form>
+          </li>
+ </ul>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top w3-white w3-opacity" style="margin-top:50px">
+  <ul class="w3-navbar w3-left-align w3-medium">
+  <li><a class="w3-padding-large w3-text-black" href="index.html" onclick="openNav().close()"><b>Main</b></a></li>
+  <li><a class="w3-padding-large w3-text-black" href="shop.html" onclick="openNav().close()"><b>Shop</b></a></li>
+  <li><a class="w3-padding-large w3-text-black" href="admin.html" onclick="openNav().close()"><b>Admin</b></a></li>
+  </ul>
+</div>
+<!-- Header -->
+  <header class="w3-container" id="shop" style="margin-top:50px">
+   <img src="Photo/shop-icon.png" alt=shopicon style="width:50px;" class="w3-right w3-margin">
+    <h1><b>Shop</b></h1>
+    <div class="w3-section w3-bottombar">
+    </div>
+  </header>
+<!-- First Photo Grid-->
+  <div class="w3-row-padding" style="margin-top:10px">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="timber.php">
+    <img src="Photo\Timber\shop.jpg" class="w3-hover-opacity" alt="shop pic" style="width:100%">
+  </a>
+      <div class="w3-container w3-white">
+        <br>
+        <p><b>Timber Café</b></p>
+        <p>Location :  ซอย ฉลองกรุง 1 กรุงเทพมหานคร (อยู่ในซอยเกกี เลยวัดปลูกเข้ามา อยู่ก่อนถึง RNP)</p>
+        <p>Open: Monday - Saturday : 11.00 A.M - 11.00 P.M</p>
+        <p>Facebook: <a href="https://www.facebook.com/pages/Timber-Cafe-Ladkrabang/910044109075804">https://www.facebook.com/pages/Timber-Cafe-Ladkrabang/910044109075804</a></p>
+        <p>Contact : 089-2027882</p>
+        <p>ขนมทานเล่น เครื่องดื่มหวานๆ อาหารจานหลักก็มี ที่ถ่ายรูปเก๋ๆก็มาาา</p>
+        <p><a href="timber.php" class="w3-right">อ่านต่อ ...</a></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="lamun.php">
+    <img src="Photo\Lamoon\shop.jpg" class="w3-hover-opacity" alt="shop pic" style="width:100%">
+  </a>
+      <div class="w3-container w3-white">
+      <br>
+        <p><b>ละมุน</b></p>
+        <p>Location : ถนน ฉลองกรุง กรุงเทพมหานคร เลี้ยวเข้าเทคโนฯ พระจอมเกล้า</p>
+        <p>Open : Monday - Sunday : 10.00 A.M - 8.00P.M</p>
+        <p>Facebook: <a href="https://www.facebook.com/lamoon.bakery">https://www.facebook.com/lamoon.bakery</a></p>
+        <p>Contact : 086-8820234</p>
+        <p>ร้านเค้กเล็กๆน่ารัก บรรยากาศอบอุ่น รสชาติเค้กละมุนนนนถูกปาก</p>
+        <p><a href="lamun.php" class="w3-right">อ่านต่อ ...</a></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <a href="milkfactory.php">
+    <img src="Photo\Milk Factory\shop.jpg" class="w3-hover-opacity" alt="shop pic" style="width:100%">
+  </a>
+      <div class="w3-container w3-white">
+      <br>
+        <p><b>Milk Factory</b></p>
+        <p>Location : ถ.ฉลองกรุง 1 แขวงลาดกระบัง เขตลาดกระบัง กรุงเทพมหานคร</p>
+        <p>Open : Monday - Sunday : 5.00 P.M - 1.00 A.M</p>
+        <p>Facebook: <a href="https://www.facebook.com/MilkFactoryBKK">https://www.facebook.com/MilkFactoryBKK/</a></p>
+        <p>Contact : 086-5551775</p>
+        <p>นม กาแฟ ขนมหวานอร่อยๆ พื้นที่นั่งคุย ที่ถ่ายรูปสวยๆ ต้องร้านนี้เลยยยย</p>
+        <p><a href="milkfactory.php" class="w3-right">อ่านต่อ ...</a></p>
+      </div>
+    </div>
+  </div>
+<!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="atladkrabang.php">
+    <img src="Photo\Na Ladkrabang\shop.jpg" class="w3-hover-opacity" alt="shop pic" style="width:100%">
+  </a>
+      <div class="w3-container w3-white">
+      <br>
+        <p><b>ณ ลาดกระบัง</b></p>
+        <p>Location : ถนน หลวงแพ่ง กรุงเทพมหานคร (อยู่หลังตลาดหัวตะเข้ เดินเข้าซอยข้างเซเว่น เดินตรงมาเรื่อยๆข้ามสะพาน แล้วเลี้ยวขวา เดินตรงมาก็จะเจอร้าน)</p>
+        <p>Open :<br>
+        Monday : closed<br>
+        Tuesday : 7.00 A.M - 7.00 P.M<br>
+        Wednesday - Sunday : 10.00 A.M - 7.00 P.M</p>
+        <p>Facebook: <a href="https://www.facebook.com/nalatkrabang/">https://www.facebook.com/nalatkrabang/</a></p>
+        <p>Contact : 086-0658422</p>
+        <p>คาเฟ่ริมคลอง บรรยากาศชิวๆ รับลมธรรมชาติ</p>
+        <p><a href="atladkrabang.php" class="w3-right">อ่านต่อ ...</a></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="bancha.php">
+    <img src="Photo\Bancha\bancha2.jpg" class="w3-hover-opacity" alt="shop pic" style="width:100%">
+  </a>
+      <div class="w3-container w3-white">
+      <br>
+        <p><b>สถานีบ้านชา</b></p>
+        <p>Location : ซอยเกกีงาม ฉลองกรุง 1 กรุงเทพมหานคร</p>
+        <p>Open : Monday - Sunday : 5.00 P.M - 11.30 P.M</p>
+        <p>Facebook: <a href="https://www.facebook.com/SthaneeBaanChaa/">https://www.facebook.com/SthaneeBaanChaa/</a></p>
+        <p>Contact : 086-3492259</p>
+        <p>ชา กาแฟ เครื่องดื่มต่างๆ ขนมปังปิ้งร้อนๆ ร้านบรรยากาศดีริมทางรถไฟ</p>
+        <p><a href="bancha.php" class="w3-right">อ่านต่อ ...</a></p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <ul class="w3-pagination">
+      <li><a class="w3-black" href="#">1</a></li>
+    </ul>
+  </div>
+
+  <div class="w3-container">
+  <h3 class="w3-border-bottom w3-border-gray w3-padding-12"></h3>
+  <p>Copyright © WhanWhan</p>
+  </div>
+
+<script>
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+</body>
+</html>
